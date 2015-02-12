@@ -1,0 +1,170 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+	background-color: grey;
+}
+
+.container {
+	margin: 0 20%;
+	height: 100%;
+}
+
+.header {
+	height: 2em;
+	background-color: white;
+}
+
+.header h2 {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.main h1 {
+	text-align: center;
+	margin: 1em 0;
+	font-size: 2em;
+}
+
+.entry-form {
+	background-color: #666;
+	height: 2.2em;
+	border-radius: 2em;
+	width: 100%;
+}
+
+.entry {
+	background-color: #666;
+	height: 2em;
+	width: 88%;
+	margin-left: 2em;
+	border: none;
+	font-size: 1em;
+}
+
+input.entry::-webkit-input-placeholder, .entry:-moz-placeholder, .entry::-moz-placeholder, .entry:-ms-input-placeholder {
+	color: red;
+}
+
+.entry, .entry-form button {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.entry-form button {
+	float: right;
+	margin-right: 3em;
+}
+
+.list {
+	margin: 2em 0;
+}
+
+.not-done {
+	margin: .33em 0;
+	height: 1.5em;
+	background-color: #bbb;
+}
+
+.checkbox {
+	display: inline;
+	width: 10px;
+	outline: 1px solid red;
+}
+
+.not-done p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
