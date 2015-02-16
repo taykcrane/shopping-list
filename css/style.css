@@ -199,6 +199,7 @@ a {
 
 .done .checkbox {
 	background-color: initial;
+	border: none;
 }
 
 .done a {
