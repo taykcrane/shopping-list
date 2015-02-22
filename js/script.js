@@ -2,9 +2,14 @@ $(document).ready(function() {
 	// Handles new entry submissions
 	$('.entry-form').submit(function(event) {
 		var entryValue = $(".entry").val();
-		$('.list').prepend("<div class='item not-done'><div class='checkbox'></div><p>" + entryValue + "</p></div>");
-		event.preventDefault();
-		$('.entry-form')[0].reset();
+		if (entryValue.length > 0) {
+			$('.list').prepend("<div class='item not-done'><div class='checkbox'></div><p>" + entryValue + "</p><div class='trash'><i class='fa fa-trash-o'></i></div></div>");
+			event.preventDefault();
+			$('.entry-form')[0].reset();
+			$(".entry").attr("placeholder", "Go ahead. Add a new item to your shopping list here.");
+		} else {
+			$(".entry").attr("placeholder", "Hey now. Please enter an item first.");
+		}
 	});
 
 	// Handles adding entries back into the list
@@ -19,8 +24,16 @@ $(document).ready(function() {
 		$(this).parent().attr("class", "item done");
 		$(this).parent().fadeOut('.5s');
 		setTimeout(function() {
-			$(".list").append("<div class='item done'><div class='checkbox'></div><p><a href='#'>" + itemText + "</a></p></div>").fadeIn();
+			$(".list").append("<div class='item done'><div class='checkbox'></div><p><a href='#'>" + itemText + "</a></p><div class='trash'><i class='fa fa-trash-o'></i></div></div>").fadeIn();
 		}, 500);
+	});
+
+	//Deletes an item when Trash is clicked
+	$(".item").hover(function() {
+		$(this).children(".trash").toggle();
+	});
+	$(document).on("click", ".trash", function() {
+		$(this).parent().remove();
 	});
 
 	//Rotates the images LIKE A BOSS
